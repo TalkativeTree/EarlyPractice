@@ -7,8 +7,8 @@
 # If +array+ is empty the method should return nil
 
 def longest_string(array)
-  array.map{|x, v| v = x.size; x}.sort.last
+  array.map{|x, v| v = x.size;x}.sort.last
 
 end
 
-puts longest_string(['cat', 'zzzzzzz', 'apples'])
+puts longest_string(['a', 'aa', 'aaaaa', 'aaaaaaaaaaaaaa', 'aaaaaaaaa'])
