@@ -1,4 +1,4 @@
-def factorial(n)
+def factorial(num)
   (1..(num.zero? ? 1 : num)).inject(:*) 
 
 end
