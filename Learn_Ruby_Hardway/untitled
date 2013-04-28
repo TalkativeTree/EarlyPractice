@@ -1,0 +1,57 @@
+def digits_place(arabic)
+	puts arabic.to_s.length
+	arabic.to_s.length.times do |count|
+		n = 1
+		return n += 1
+	end
+end
+def to_roman(arabic)
+x = [ 'I', 'X', 'C', 'M']
+y = [ 'V', 'L', 'D', '' ]
+z = [ 'X', 'C', 'M', '' ]
+puts x[2]
+array = [['I', 'V', 'X'],
+				 ['X', 'L', 'C'],
+				 ['C', 'D', 'M'],]
+
+# puts array[0][0] * 1
+# puts array[0][0] * 2
+# puts array[0][0] * 3
+# puts array[0][0] + array[0][1]
+# puts array[0][1]
+# puts array[0][1] + array[0][0] * 1
+# puts array[0][1] + array[0][0] * 2
+# puts array[0][1] + array[0][0] * 3
+# puts array[0][1] + array[0][2]
+# puts array[1][0] * 1
+# puts array[1][0] * 2
+# puts array[1][0] * 3
+# puts array[1][0] + array[1][1]
+# puts array[1][1]
+# puts array[1][1] + array[1][0] * 1
+# puts array[1][1] + array[1][0] * 2
+# puts array[1][1] + array[1][0] * 3
+# puts array[1][1] + array[1][2]
+puts array.transpose.inspect
+digits_place = arabic.to_s.length - 1
+puts digits_place
+roman_digit_pattern = Hash["1" => 'X', 
+											 "2" => 'XX', 
+											 "3" => 'XXX'
+											 "4" => 'XY',
+											 "5" => 'Y',
+											 "6" => 'YX',
+											 "7" => 'YXX',
+											 "8" => 'YXXX',
+											 "9" => 'XZ']
+puts arabic.to_s
+puts roman_digit_pattern["1"].inspect
+# puts array[digits_place][roman_digit_pattern["3"]]
+arabic.to_s.each_char do |digit| 
+	 puts roman_digit_pattern[digit].inspect
+end
+puts array.inspect
+digits_place -= 1
+end
+
+puts digits_place(123)
