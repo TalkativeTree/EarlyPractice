@@ -1,0 +1,12 @@
+module CSVParser
+  def self.parse_class_objects(filename, klass)
+    object = []
+    CSV.foreach(filename, :headers => true) do |row|
+      object << klass.new(row)
+    end
+    object
+  end
+
+end
+
+store = CSVParser.create_class_objects('filename', Recipe)

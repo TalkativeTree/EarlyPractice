@@ -1,9 +1,16 @@
+take action
+find food
+find a new tree
+go to the bathroom
+eat
+
 	#fighting
 		@strength		#tied 
 		@speed			#two_toed are faster than three toed
 		@dexterity 	#dexterity tied to vertebrae
 		@awareness
 		@abilities
+			attacking by slashing with claws, grasping and pulling the offender closer to be bitten
 			@evade
 				@camouflage
 				@stay_the_math_still
@@ -17,11 +24,12 @@
 	#Environment	
 		@habitat
 			@trees
+				Lacmellea panamensis, which is one of the most easily digestible to sloths
+				Cecropia
+
 			@water
 			@ground
-					@stage 			= "baby"
-		@sloth_stages =	["baby", "adolescent", "teen", 
-									 "adult", "MegaSloth", "Slothra"]
+					
 		@size
 			@claws 		= 2 || 3
 			@height		= 
@@ -39,3 +47,4 @@
 		@awake = false
 		@asleep = true
 end
+their closest competitors are not mammals, but reptiles

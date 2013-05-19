@@ -139,7 +139,7 @@ class InitializeSlothWars #the loading screen. What is called to begin playing t
 		File.open(@filename, 'w'){|f| f.write(@new_string)}
 		puts File.read @filename
 	end #birth
-end	 #class SlothGame	
+end	 #class InitializeSlothWars
 
 # class SlothGame #the main loading class. What is called to begin playing the game
 # 	def initialize

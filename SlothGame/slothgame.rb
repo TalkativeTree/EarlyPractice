@@ -1,4 +1,3 @@
-$prompt = "> "
 class InitializeSlothWars #the loading screen. What is called to begin playing the game
   attr_accessor :name, :type, :kind
   def initialize
@@ -10,7 +9,7 @@ class InitializeSlothWars #the loading screen. What is called to begin playing t
     gets 
     puts "Anyway, have you already been slotherized?"
     puts "Type [yes] or [no] to continue".center(80)
-    print $prompt
+    print "> "
     answer = STDIN.gets.chomp()
     if answer == "yes" || answer.downcase ==  "[yes]"
       load_sloth_wars
@@ -30,7 +29,7 @@ class InitializeSlothWars #the loading screen. What is called to begin playing t
   
   def load_sloth_wars
     puts "What's the name of your sloth?"
-    print $prompt
+    print "> "
     answer = gets.chomp()
     @filename = answer + ".txt"   
     if File.file? @filename
@@ -84,7 +83,7 @@ class InitializeSlothWars #the loading screen. What is called to begin playing t
 
     puts "IT\nIS\nTIME\nTO\nMAKE\nYOUR\nSLOTH\nBABY"
     puts "Did you read that? Be honest"
-    print $prompt
+    print "> "
     input = STDIN.gets.chomp()
     if input.include?("n") || input.include?("o")
       puts "Well here's a second chance.\n.\n.\n."
@@ -96,11 +95,11 @@ class InitializeSlothWars #the loading screen. What is called to begin playing t
     puts "You're going to start off with a baby sloth and it's you're job to raise it.\n" +
          "You can either raise it to be peaceful, or a slow, ineffectual, fighting machine!\n" +
          "To begin, what would you like to name your sloth?"
-    print $prompt
+    print "> "
     self.name = STDIN.gets.chomp()
     puts "#{@name} is a great name! How many toes you want your sloth to have"
     puts "(psst! Your sloth must have either 2 or 3 toes.)"
-    print $prompt
+    print "> "
     self.type = STDIN.gets.chomp()
     puts
 #customizing your sloth 
@@ -118,14 +117,14 @@ class InitializeSlothWars #the loading screen. What is called to begin playing t
         puts "So what kind of 2 toed sloth do you want to be?\n\n"
         puts "Your options are:" 
         @two_toed_sloths.each{|kind| puts (@two_toed_sloths.index(kind)+1).to_s + " " + kind}
-        print $prompt
+        print "> "
         self.kind = @two_toed_sloths[STDIN.gets.chomp().to_i - 1] 
       elsif @type == "3" || @type.downcase == "three"
         puts "    \"Three of a kind always beats a pair.\" - President Gandhi" 
         puts "So what kind of 3 toed sloth do you want to be?\n\n"
         puts "Your options are:"
         @three_toed_sloths.each{|kind| puts (@three_toed_sloths.index(kind) + 1).to_s + " " + kind} 
-        print $prompt
+        print "> "
         self.kind = @three_toed_sloths[STDIN.gets.chomp().to_i - 1]
       else
         puts "Why you tryna be a joker? Sloths only have 2 or 3 fingers, 
@@ -145,11 +144,13 @@ end  #class SlothGame
 class Sloth
   attr_reader :name, :kind, :type
   def initialize
-    $prompt = "> "
     @character_details = []
       @name = nil
       @type = nil#2 or 3 toed sloth
       @kind = nil#type of 2 or 3 toed sloth
+    @stage      = "baby"
+    @sloth_stages = ["baby", "adolescent", "teen", 
+                   "adult", "MegaSloth", "Slothra"]
     @character_stats   = 
       #status 
     @stomach = 10

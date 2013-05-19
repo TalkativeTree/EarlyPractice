@@ -4,14 +4,15 @@ are in relation to my existence..."
 puts
 puts "Press [Enter] to continue.".center(80)
 gets
-puts	"(I'm a program so does this mean we're in Tron, but instead of Jeff Bridges we\n  have Jeff Goldblum and a giant man-eating sloth instead of a T-rex?)" 
+puts	"(I'm a program so does this mean we're in Tron, but instead of Jeff Bridges we\ 
+			have Jeff Goldblum and a giant man-eating sloth instead of a T-rex?)" 
 gets
-"let me officially welcome you to Sloth Wars!"
+puts 	"let me officially welcome you to Sloth Wars!"
 
-puts "Unlike it's name, this isn't a violent game...yet. In this game you'll get to
-birth a sloth and raise it as your own."
+puts "Unlike it's name, this isn't a violent game...yet. In this game you'll get to\ 
+			birth a sloth and raise it as your own."
 gets
-puts 	"(hopefully not figuratively. We only talk in literals on this island          
+puts 	"(hopefully not figuratively. We only talk in literals on this island\
 		{we're on an island? [is this Lost?]})" 
 gets
 puts "You of course have many options of raising a sloth with three toes or a sloth with
