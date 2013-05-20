@@ -1,0 +1,16 @@
+<div class="flash_box">
+<% @deck.cards.each do |card| %>
+  <div class="question" style="display:none">
+    <%= card.question %>
+    <form class="stuff" action="/answer" method="post">
+      <input type="hidden" name="card_id" value="<%=card.id%>">
+      <input type="hidden" name="round_id" value="<%=@round.id%>">
+      <input type="text" name="answer" placeholder="Answer here">
+      <input type="submit" value="Answer!">
+    </form>
+  </div>
+<% end %>
+</div>
+<script>
+  $('.question').first().slideDown();
+</script>
