@@ -1,0 +1,1 @@
+<p>This Repo is mostly me playing around with Ruby when I was first learning the language in preparation for Dev Bootcamp. Keeping it mostly to look back upon a few years from now to remind myself how bad everyone is at programming when they first start out.</p>
